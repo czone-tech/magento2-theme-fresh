@@ -1,13 +1,22 @@
 {
   "name": "czone-ashish/theme-frontend-fresh",
+  "description": "Free magento2 frontend theme for your store",
+  "keywords": [
+    "magento 2",
+    "magento 2 theme",
+    "magento 2 free theme",
+    "magento2 theme",
+    "magento2 free theme"
+  ],
+  "type": "magento2-theme",
+  "version": "2.0.0",
+  "require": {
+    "php": "~5.5.9.0|~5.6.0|7.0.2|~7.0.6",
+    "magento/framework": "100.0.*"
+  },
   "autoload": {
     "files": [
       "registration.php"
     ]
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "master"
-    }
   }
 }
