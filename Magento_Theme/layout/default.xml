@@ -7,50 +7,6 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-
-
-
-        <referenceContainer name="header.container">
-            <container name="header.panel.wrapper" htmlClass="panel wrapper" htmlTag="div" before="-"/>
-        </referenceContainer>
-        <referenceContainer name="header.panel">
-            <container name="header.panel.left.wrapper" htmlClass="left-panel wrapper" htmlTag="div" before="-"/>
-            <container name="header.panel.middle.wrapper" htmlClass="middle-panel wrapper" htmlTag="div" after="header.panel.left.wrapper">
-                <container name="header.panel.middle.wrapper.contact.number" htmlClass="contact-no" htmlTag="div" before="-">
-                    <block class="Magento\Framework\View\Element\Text">
-                        <arguments class="testing">
-                            <argument name="text" xsi:type="string">+91 999-961-9050</argument>
-                        </arguments>
-                    </block>
-                </container>
-                <container name="header.panel.middle.wrapper.contact.link" htmlClass="contact-link" htmlTag="ul" after="header.panel.middle.wrapper.contact.number">
-                    <block class="Magento\Framework\View\Element\Html\Link\Current">
-                        <arguments>
-                            <argument name="label" xsi:type="string">Contact us</argument>
-                            <argument name="path" xsi:type="string">contact</argument>
-                        </arguments>
-                    </block>
-                </container>
-            </container>
-            <block class="Magento\Store\Block\Switcher" name="store_language" as="store_language" template="switch/languages.phtml"/>
-        </referenceContainer>
-        <move element="header.panel" destination="header.panel.wrapper"/>
-        <move element="top.links" destination="header.panel" after="-"/>
-        <move element="catalog.topnav" destination="store.menu" before="-"/>
-        <move element="store_language" destination="header.panel.left.wrapper"></move>
-        <move element="currency" destination="header.panel.left.wrapper"></move>
-        <referenceBlock name="footer_links">
-            <block class="Magento\Framework\View\Element\Html\Link\Current" name="about_us_link" before="-">
-                <arguments>
-                    <argument name="label" xsi:type="string">About Us</argument>
-                    <argument name="path" xsi:type="string">about</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
-
-
-
-
         <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
                 <arguments>
@@ -70,7 +26,43 @@
         </referenceContainer>
         <referenceBlock name="report.bugs" remove="true"/>
         <move element="copyright" destination="before.body.end"/>
-        <referenceBlock  name="my-account-link" remove="true"/>
-        <referenceBlock name="wish-list-link" remove="true" />
+
+        <referenceContainer name="header.panel">
+            <container name="header.panel.left.wrapper" htmlClass="left-panel wrapper" htmlTag="div" before="-"/>
+            <container name="header.panel.middle.wrapper" htmlClass="middle-panel wrapper" htmlTag="div" after="header.panel.left.wrapper">
+                <container name="header.panel.middle.wrapper.contact.number" htmlClass="contact-no" htmlTag="div" before="-">
+                    <block class="Magento\Framework\View\Element\Text">
+                        <arguments class="testing">
+                            <argument name="text" xsi:type="string">+91 999-961-9050</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="header.panel.middle.wrapper.contact.link" htmlClass="contact-link" htmlTag="ul" after="header.panel.middle.wrapper.contact.number">
+                    <block class="Magento\Framework\View\Element\Html\Link\Current">
+                        <arguments>
+                            <argument name="label" xsi:type="string">Contact us</argument>
+                            <argument name="path" xsi:type="string">contact</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+
+        </referenceContainer>
+        <move element="store_language" destination="header.panel.left.wrapper"></move>
+        <move element="currency" destination="header.panel.left.wrapper"></move>
+
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="about_us_link" before="-">
+                <arguments>
+                    <argument name="label" xsi:type="string">About Us</argument>
+                    <argument name="path" xsi:type="string">about</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <referenceBlock name="header.links">
+            <block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link-login" template="account/link/authorization.phtml" before="register-link"/>
+        </referenceBlock>
+
     </body>
 </page>
