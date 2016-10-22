@@ -1,0 +1,115 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+//
+//    Newsletter subscription
+//--------------------------------------
+
+.block.newsletter {
+    margin-bottom: 20px;
+    .form.subscribe {
+        display: table;
+        width: 100%;
+    }
+    .fieldset {
+        display: table-cell;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+    }
+    .field {
+        margin: 0;
+        .control {
+            position: relative;
+            .lib-icon-font(
+                @icon-envelope,
+                @_icon-font-size: 16px,
+                @_icon-font-line-height: 32px,
+                @_icon-font-color: @form-element-input-placeholder__color,
+                @_icon-font-margin: 0 0 0 8px
+            );
+            &:before {
+                position: absolute;
+                top: 5px;
+            }
+            display: block;
+        }
+    }
+    input {
+        padding-left: 35px;
+        background: @white;
+        border: 1px solid @base-border-color;
+        height: 40px;
+    }
+    .title {
+        display: none;
+    }
+    .label {
+        &:extend(.abs-visually-hidden all);
+    }
+    .actions {
+        display: block;
+        float: right;
+        width: auto;
+        margin-top: 15px;
+    }
+    .action.subscribe {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: -1px;
+        background: @base-pink-color;
+        text-transform: uppercase;
+        color: @white;
+        border-color: @base-pink-color;
+
+        &:hover,
+        &:focus {
+            background: @black;
+            border-color: @black;
+        }
+    }
+    .smo-wrapper {
+        margin-top: 20px;
+        h4,
+        a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        a {
+            margin-left: 8px;
+            font-size: 24px;
+            color: rgba(255,255,255,0.5) !important;
+
+            &:first-of-type {
+                margin-left: 30px;
+            }
+
+            &:hover {
+                color: fade(@white, 90%) !important;
+            }
+        }
+    }
+}
+
+    p {
+        margin-bottom: 20px !important;
+    }
+
+}
+
+//
+//    Desktop
+//--------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block.newsletter {
+        width: 34%;
+    }
+}

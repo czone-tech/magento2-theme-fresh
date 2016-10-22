@@ -1,0 +1,13 @@
+{
+  "name": "czone-ashish/theme-frontend-fresh",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "master"
+    }
+  }
+}
