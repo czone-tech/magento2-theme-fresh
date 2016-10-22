@@ -7,13 +7,6 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="header.panel">
-            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
-                <arguments>
-                    <argument name="css_class" xsi:type="string">header links</argument>
-                </arguments>
-            </block>
-        </referenceContainer>
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/logo.png</argument>
@@ -21,11 +14,6 @@
                 <argument name="logo_img_height" xsi:type="number">43</argument>
             </arguments>
         </referenceBlock>
-        <referenceContainer name="footer">
-            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="switch/stores.phtml"/>
-        </referenceContainer>
-        <referenceBlock name="report.bugs" remove="true"/>
-        <move element="copyright" destination="before.body.end"/>
 
         <referenceContainer name="header.panel">
             <container name="header.panel.left.wrapper" htmlClass="left-panel wrapper" htmlTag="div" before="-"/>
@@ -46,7 +34,6 @@
                     </block>
                 </container>
             </container>
-
         </referenceContainer>
         <move element="store_language" destination="header.panel.left.wrapper"></move>
         <move element="currency" destination="header.panel.left.wrapper"></move>
