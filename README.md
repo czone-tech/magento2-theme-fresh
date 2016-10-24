@@ -1,4 +1,4 @@
-## Frontend Theme for Magento2
+## Frontend Theme for Magento2 (tested with Magento 2.1.x)
 This is a frontend theme for Magento2 that is completely free and open-source.
 
 ![screenshot-172 16 0 67-2016-10-24-12-19-48](https://cloud.githubusercontent.com/assets/1729518/19636039/3af9e52a-99e4-11e6-88c1-30c25500940b.png)
