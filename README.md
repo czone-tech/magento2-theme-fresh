@@ -1,8 +1,9 @@
 ## Frontend Theme for Magento2
 This is a frontend theme for Magento2 that is completely free and open-source.
 
+![screenshot-172 16 0 67-2016-10-24-12-19-48](https://cloud.githubusercontent.com/assets/1729518/19636039/3af9e52a-99e4-11e6-88c1-30c25500940b.png)
 
-If you have any issues using this theme, you may contact us at support@czonetechnologies.com
+If you have any issues using this theme, you may contact us at **support@czonetechnologies.com**
 
 
 
@@ -57,9 +58,11 @@ Copy the contents of setup.sql (located in the root of this package's code) and 
 8. Flush Magento Cache And go to the Magento frontend home page. You should see the new design.
 
 
-## Screenshot
+## Screenshots
 
-![screenshot-172 16 0 67-2016-10-24-12-19-48](https://cloud.githubusercontent.com/assets/1729518/19636039/3af9e52a-99e4-11e6-88c1-30c25500940b.png)
 ![screenshot-172 16 0 67-2016-10-24-12-22-43](https://cloud.githubusercontent.com/assets/1729518/19636097/afd015ea-99e4-11e6-82a7-c3a880a43b6c.png)
+![screenshot-172 16 0 67-2016-10-24-12-34-32](https://cloud.githubusercontent.com/assets/1729518/19636328/48bf1b6a-99e6-11e6-992c-954cef5dfb7a.png)
+![screenshot-172 16 0 67-2016-10-24-12-38-57](https://cloud.githubusercontent.com/assets/1729518/19636424/e06525e0-99e6-11e6-93f8-c2d30a73b4f3.png)
+
 
 
