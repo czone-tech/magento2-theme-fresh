@@ -28,6 +28,8 @@ composer require czonetech/theme-frontend-fresh
 
 ####2 -  Enabling the theme
 
+
+
 1. Go to Magento admin panel and then 'Content -> Design -> Configuration'
 ![screenshot-172 16 0 67-2016-10-24-11-37-41](https://cloud.githubusercontent.com/assets/1729518/19635293/d80559f4-99de-11e6-9f25-53a1c794a321.png)
 
@@ -43,7 +45,11 @@ composer require czonetech/theme-frontend-fresh
 Copy the contents of setup.sql (located in the root of this package's code) and execute it on your database server
  using a database client-
  ![screenshot-172 16 0 58-2016-10-24-12-00-21](https://cloud.githubusercontent.com/assets/1729518/19635669/9f59c25e-99e1-11e6-98da-c29d7436c255.png)
-
+ Or run this via command line-
+ ```
+ mysql -u dbuser -ppassword database < path-to-setup.sql
+ ```
+ 
 5. To show the blocks on the homepage, go to 'Content -> Pages', and click on 'Edit' to edit the page's contents.
 ![screenshot-172 16 0 67-2016-10-24-12-05-17](https://cloud.githubusercontent.com/assets/1729518/19635753/3c540bc8-99e2-11e6-883c-770af16e6f1f.png)
 
