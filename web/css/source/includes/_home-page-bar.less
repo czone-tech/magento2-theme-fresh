@@ -1,0 +1,41 @@
+/*  home page bar */
+
+.home-page-bar{
+  background: @base-bg-color;
+  border: 1px solid @base-border-color;
+  margin-top: -19px;
+
+  div[class*="col-"]{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-left: 1px solid @base-border-color;
+    &:first-of-type{
+      border: 0;
+    }
+    &:nth-child(2),
+    &:nth-child(3){
+      padding-left: 40px;
+    }
+  }
+  .support-icon{
+    .inline-block();
+  }
+  .content{
+    .inline-block();
+    margin-left: 17px;
+    h3{
+      color: @black;
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height:1;
+      margin: 0 0 10px;
+    }
+    h4{
+      font-size: 14px;
+      margin: 0;
+      line-height: 1;
+    }
+  }
+}
+
+/*  /home page bar */

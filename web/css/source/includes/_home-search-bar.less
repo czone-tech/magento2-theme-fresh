@@ -1,0 +1,50 @@
+// header search block modified css
+
+.block-search{
+  input{
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid @base-border-dark-color;
+    .border-radius(40px;);
+    text-transform: uppercase;
+    color: @base-text-color;
+    padding-left: 25px;
+
+    /*  &::-moz-placeholder{ color: @base-border-dark-color; }
+      &::-webkit-input-placeholder{ color: @base-border-dark-color; }
+      &:-ms-input-placeholder{ color: @base-border-dark-color;}*/
+
+  }
+
+  input::-webkit-input-placeholder {
+    color: @base-border-dark-color;
+  }
+  input:focus::-webkit-input-placeholder {
+    color: #ccc;
+  }
+
+  /* Firefox < 19 */
+  input:-moz-placeholder {
+    color: @base-border-dark-color;
+  }
+  input:focus:-moz-placeholder {
+    color: #ccc;
+  }
+
+  /* Firefox > 19 */
+  input::-moz-placeholder {
+    color: @base-border-dark-color;
+  }
+  input:focus::-moz-placeholder {
+    color: #ccc;
+  }
+
+  /* Internet Explorer 10 */
+  input:-ms-input-placeholder {
+    color: @base-border-dark-color;
+  }
+  input:focus:-ms-input-placeholder {
+    color: #ccc;
+  }
+
+}

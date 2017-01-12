@@ -1,0 +1,39 @@
+//pagination modified css
+
+.pages{
+
+  .items{
+
+    .item{
+      .white-bordered-box();
+
+      &.pages-item-previous,
+      &.pages-item-next{
+
+        > .action{
+          background: none;
+          border: 0;
+          margin: 0;
+          .box-shadow(none);
+
+          &:before{
+            .transition(all .2s ease-in);
+          }
+
+        }
+      }
+      &:hover{
+        > .action{
+
+          &:before{
+            color: @white;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+}

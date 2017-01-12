@@ -1,0 +1,126 @@
+// navigation css
+
+.navigation{
+
+  .level0{
+
+    .level-top{
+      color: @white;
+      text-transform: uppercase;
+      font-weight: normal;
+
+      &:hover,
+      &:focus{
+        color: @white;
+      }
+      &.ui-state-focus{
+        color: @white;
+      }
+
+    }
+
+    &.active,
+    &.has-active{
+
+      .level-top{
+        color: @white;
+        border-color: @black;
+      }
+
+    }
+
+    &.parent{
+      padding-right: 20px;
+      .level-top{
+        .ui-menu-icon{
+          position: absolute;
+          right: -5px;
+          &:after{
+            content: "\e259";
+            .glyphicons-font();
+            font-style: normal;
+            font-weight: normal;
+            color: @white;
+            font-size: 12px;
+          }
+        }
+      }
+
+    }
+
+    .submenu{
+      background: @base-pink-color;
+      border: 0;
+      a{
+        color: @white;
+        &.ui-state-focus{
+          background: @base-bg-color;
+          color: @base-text-color;
+        }
+      }
+
+      li.level1{
+        position: relative;
+
+        &.parent{
+          .ui-menu-icon{
+            float: right;
+            margin-left: -5px;
+            margin-right: 5px;
+            &:after{
+              content: "\e258";
+              .glyphicons-font();
+              font-style: normal;
+              font-weight: normal;
+              color: @white;
+              font-size: 12px;
+            }
+          }
+          .ui-state-focus{
+            .ui-menu-icon{
+              &:after{ color: @base-text-color;}
+            }
+          }
+        }
+
+      }
+
+      .active{
+        background: @base-bg-color;
+
+        > a{
+          color: @base-text-color;
+          border-color: @black;
+
+          .ui-menu-icon{
+            &:after{
+              color: @base-text-color!important;
+            }
+          }
+        }
+
+      }
+
+    }
+    &.last{
+      > .level-top{
+        background: @base-bg-color;
+        border: 1px solid @base-border-color;
+        padding: 2px 15px;
+        color: @black;
+        .border-radius(12px);
+        display: inline;
+
+        &:hover,
+        &:focus{
+          color: @black;
+        }
+        &.ui-state-focus{
+          color: @black;
+        }
+      }
+    }
+
+  }
+
+}

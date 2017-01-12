@@ -1,0 +1,222 @@
+// sidebar modified css
+
+.sidebar{
+  &.sidebar-main{
+
+    .block-subtitle{
+      clear: both;
+      border: 0;
+      padding-left: 0;
+      color: @base-pink-color;
+      font-size: 18px;
+      text-transform: uppercase;
+      display: none;
+    }
+
+    .filter-current{
+      background: @base-bg-color;
+      border: 1px solid @base-border-color;
+
+      .block-subtitle{
+        color: @base-pink-color;
+        font-size: 14px;
+        padding-left: 10px;
+        display: block;
+        font-weight: normal;
+      }
+
+      .items{
+        padding: 0;
+
+        .item{
+          padding: 10px;
+          margin: 0;
+          border-top: 1px solid @base-border-color;
+          font-size: 13px;
+
+          .action.remove{
+            right: 10px;
+            top: 10px;
+            left: auto;
+
+            &:before{
+              color: @base-text-color;
+              font-weight: bold;
+              .transition(all .2s ease-in);
+            }
+
+            &:hover{
+              &:before{
+                color: @base-pink-color;
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+
+    .filter-actions{
+      margin:-1px 0 20px;
+      float: left;
+      padding: 5px 10px;
+      background: @base-bg-color;
+      border: 1px solid @base-border-color;
+      border-top: 0;
+      color: @black;
+      font-size: 13px;
+      .border-radius(0 0 6px 6px);
+      .transition(all .2s ease-in);
+
+      &:hover{
+        color: @base-pink-color;
+      }
+
+
+    }
+
+
+    .filter-options{
+
+      .filter-options-item{
+        border: 0;
+        background-color: #000;
+        margin-bottom: 20px;
+        padding-bottom: 0;
+
+        .filter-options-title{
+          color: @white;
+          padding-bottom: 10px;
+
+          &:after{
+            content: '\e609';
+            font-size: 20px;
+            line-height: 20px;
+            border: 1px solid rgba(255,255,255,0.5);
+            padding: 1px 5px;
+            border-radius: 2px;
+            background-color: rgba(255,255,255,0.3);
+            margin-top: -1px;
+          }
+
+        }
+
+        .filter-options-content{
+          background: @base-bg-color;
+          border-bottom: 3px solid @black;
+          padding: 0;
+
+          .items{
+
+            .item{
+              margin: 0;
+              font-size: 13px;
+
+              > a{
+                display: block;
+                padding: 10px;
+                margin: 0;
+                .transition(all .2s ease-in);
+
+                &:hover,
+                &:focus{
+                  background: @base-bg-dark-color;
+                }
+
+              }
+
+              + .item {border-top: 1px solid @base-border-color;}
+
+            }
+
+          }
+
+
+        }
+
+      }
+
+    }
+
+    .swatch-attribute{
+
+      &.size{
+        padding: 10px;
+
+      }
+
+      &.color{
+        padding: 10px;
+
+      }
+
+    }
+
+    > .block{
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &.sidebar-additional{
+
+    > .block{
+      margin-bottom: 20px;
+      background: @base-bg-color;
+      border: 1px solid @base-border-color;
+      padding: 10px;
+      font-size: 13px;
+
+      .block-title{
+        margin-bottom: 10px;
+
+        strong{
+          font-size: 14px;
+          font-weight: normal;
+          color: @base-pink-color;
+          text-transform: uppercase;
+        }
+
+      }
+
+    }
+  }
+
+}
+
+.account .sidebar-additional{ margin-top: 0;}
+
+.swatch-attribute{
+
+  &.size{
+
+    .swatch-option{
+      background: @white;
+      border-color: @base-border-color;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+      color: @base-pink-color;
+      padding: 0;
+    }
+
+  }
+
+  &.color{
+
+    .swatch-option{
+      width: 32px;
+      height: 32px;
+      border-color: @white;
+      outline: 1px solid @base-border-color;
+
+      &.selected{
+        outline: 2px solid red;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,121 @@
+.minicart-wrapper{
+
+  .action{
+    &.showcart{
+      .counter{
+        &.qty{
+          background: @base-pink-color;
+        }
+      }
+      &:before{
+        line-height: 50px;
+        color: @base-pink-color;
+        font-size: 30px;
+      }
+      &.active{
+        &:before{
+          line-height: 50px;
+          color: @base-pink-color;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+}
+
+// mini cart drop modified css
+
+.minicart-wrapper{
+
+  .block-minicart{
+
+    .subtotal{
+      .label,
+      .amount.price-container{
+        .inline-block();
+      }
+      .label{
+        margin-right: 10px;
+      }
+    }
+
+    .minicart-items-wrapper{
+
+      .minicart-items{
+
+        .product-item-name{
+          text-transform: uppercase;
+          line-height: 30px;
+          a{
+            color: @base-pink-color;
+          }
+        }
+
+        .product{
+
+          .toggle {
+            line-height: 30px;
+
+            > span{
+              position: static;
+            }
+
+          }
+
+          .content{
+            line-height: 30px;
+            .product.options.list{
+
+              .label{
+                clear: both;
+                float: left;
+                &:after{
+                  content: ':';
+                  .inline-block();
+                  font-weight: bold;
+                  margin: 0 5px;
+                }
+              }
+              .values{
+                float: left;
+              }
+
+            }
+
+          }
+
+          .product-item-pricing{
+            clear: both;
+            @media screen and (min-width: 768px){
+              float: left;
+            }
+
+            .price-container,
+            .details-qty{
+              @media screen and (min-width: 768px){
+                .inline-block();
+                margin: 0;
+              }
+            }
+            .details-qty{
+              @media screen and (min-width: 768px){
+                margin-left: 30px;
+              }
+            }
+
+          }
+
+          .actions{
+            @media screen and (min-width: 768px){
+              margin: 0;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+}

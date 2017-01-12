@@ -1,0 +1,105 @@
+/*  category boxes */
+.category-boxes-wrapper{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  div[class*="col-"]{
+    position: relative;
+    padding: 15px;
+    min-height: 220px;
+    color: @white;
+    cursor: pointer;
+    .support-img{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    h2{
+      font-size: 30px;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1;
+      padding-bottom: 5px;
+      position: relative;
+      z-index: 1;
+    }
+    h3{
+      font-size: 20px;
+      margin: 0;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      span{
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 5px;
+        &.up-to{
+          padding-top: 15px;
+        }
+        &.percentage{
+          font-size: 40px;
+          color: @base-pink-light-color;
+          padding-top: 25px;
+        }
+        &.off{
+          padding-top: 42px;
+        }
+      }
+    }
+    .buy-now-btn{
+      font-size: 12px;
+      border: 0;
+      padding: 8px 20px;
+      margin: 0;
+      background: rgba(255,255,255,0.3);
+      position: absolute;
+      right: 15px;
+      bottom: 30px;
+    }
+    &.black-box{
+      background: @black;
+    }
+    &.pink-box{
+      background: @base-pink-color;
+    }
+    &.light-box{
+      background: @base-bg-color;
+      color: @black;
+      .buy-now-btn{
+        background: rgba(0,0,0,0.3);
+        color: @black;
+      }
+    }
+    &.gray-box{
+      background: @base-text-color;
+      text-align: center;
+      h3{
+        padding-top: 5px;
+      }
+      .buy-now-btn{
+        position: relative;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        margin-top: 20px;
+        background: rgba(0,0,0,0.6);
+      }
+      .promos{
+        color: @base-pink-light-color;
+      }
+    }
+    &.middle-two-box{
+      h2{
+        padding-top: 30px;
+      }
+      h3{
+        line-height: 1.2;
+      }
+    }
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+
+}
+/*  /category boxes */
