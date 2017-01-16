@@ -1,0 +1,53 @@
+<div class="parallax-window company-info-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-xs-12 col-sm-7">
+                <h1>Welcome to our site</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-4 blog-wrapper col-md-offset-1">
+                <h1>From the blog</h1>
+                <div class="owl-carousel">
+                    <div>
+                        <div class="blog-img-wrapper"><img class="img-responsive" src="<?=$block->getViewFileUrl("images/media/blogger-img.jpg");?>" alt="" />
+                            <div class="date"><span class="day">05</span> <span class="month">Jan</span></div>
+                            <div class="content">
+                                <h2>Post Format &ndash; Image Gallery</h2>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout... <a class="read-more" href="#">read more...</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="blog-img-wrapper"><img class="img-responsive" src="<?=$block->getViewFileUrl("images/media/company-info_bg.jpg");?>" alt="" />
+                            <div class="date"><span class="day">11</span> <span class="month">March</span></div>
+                            <div class="content">
+                                <h2>Blog second</h2>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout... <a class="read-more" href="#">read more...</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="blog-img-wrapper"><img class="img-responsive" src="<?=$block->getViewFileUrl("images/media/slide1.jpg");?>" alt="" />
+                            <div class="date"><span class="day">07</span> <span class="month">April</span></div>
+                            <div class="content">
+                                <h2>Third Blog</h2>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout... <a class="read-more" href="#">read more...</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">// <![CDATA[
+    require([
+        'jquery',
+        'owlcarousel',
+        'parallax'
+    ], function($){
+        $(document).on('ready.px.parallax.data-api', function () {
+            $('.parallax-window').parallax({imageSrc: '<?=$block->getViewFileUrl("images/media/company-info_bg.jpg");?>'});
+        });
+    });
+    // ]]></script>
